@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your appointment quickly and easily.">
+    <meta name="author" content="Your Name">
+    <title>Book your appointment</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background-image: url('appoint image.webp');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4); /* Dark overlay */
+        }
+
+        .hero-section h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-section p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .cta-button {
+            background-color: #28a745; /* Green */
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #218838;
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            background-color: #ffffff;
+        }
+
+        .feature {
+            text-align: center;
+            width: 30%;
+            padding: 20px;
+        }
+
+        .feature img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature img:hover {
+            transform: scale(1.1);
+        }
+
+        .feature h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .feature p {
+            font-size: 1em;
+            color: #777;
+        }
+
+        /* Booking Form Section */
+        .booking-form {
+            background-color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: -30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-form h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .booking-form input,
+        .booking-form select,
+        .booking-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 1em;
+        }
+
+        .booking-form button {
+            background-color: #ff7f50; /* Coral */
+            color: white;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .booking-form button:hover {
+            background-color: #e67e22;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .feature {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Book Your Appointment</h1>
+        <p>Get personalized service at your convenience!</p>
+        <a href="#booking" class="cta-button">Book Now</a>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature">
+            <img src="fast.avif" alt="Fast Service">
+            <h3>Fast Service</h3>
+            <p>Book your appointment in just a few clicks, no hassle.</p>
+        </div>
+        <div class="feature">
+            <img src="flexible.jpg" alt="Flexible Schedule">
+            <h3>Flexible Schedule</h3>
+            <p>Choose a time that works best for you. We’re flexible!</p>
+        </div>
+        <div class="feature">
+            <img src="expertadvice.jpg" alt="Expert Professionals">
+            <h3>Expert Professionals</h3>
+            <p>Our team is skilled, certified, and ready to assist you.</p>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-form" id="booking">
+        <h2>Book an Appointment</h2>
+        <form action="#" method="POST" id="booking-form">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <input type="date" id="appointment-date" name="appointment-date" required>
+            <select id="appointment-time" name="appointment-time" required>
+                <option value="">Select Time</option>
+                <option value="9:00 AM">9:00 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="1:00 PM">1:00 PM</option>
+                <option value="2:00 PM">2:00 PM</option>
+            </select>
+            <textarea id="message" name="message" placeholder="Message (Optional)" rows="4"></textarea>
+            <button type="submit">Book Appointment</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+    </footer>
+
+   
